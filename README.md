@@ -34,15 +34,18 @@ string or paragraphs, or removing from line x to y.
 ## Usage
 Each of the methods will print error messaged to the screen if any is encountered.
 
-      import GSFileManager.FileManager;
+```java
+import GSFileManager.FileManager;
 
-      public class Example {
-         public static void main(String[] args) {
-            String filename = "path\\to\\your\\file.txt
-            FileManager myManager = new FileManager();
-            myManager.createFile(filename);
-         }
-      }
+public class Example {
+   public static void main(String[] args) {
+      String filename = "path\\to\\your\\file.txt
+      FileManager myManager = new FileManager();
+      myManager.createFile(filename);
+   }
+}
+```
+
 You create your file manager object before you can access to any file. This objects
 lets you deal with multiple files at once while only needing one object. Using the
 <i>createFile()</i> method, you can create a new file. The <i>createFile()</i> 
@@ -51,31 +54,36 @@ to the file (e.g. D:\\Personal Files\\myfile.txt).
 
 <br>
 
-      import GSFileManager.FileManager;
+```java
+import GSFileManager.FileManager;
 
-      public class Example {
-         public static void main(String[] args) {
-            ...
-            
-            String file = myManager.readFile(filePath);
-         }
-      }
+public class Example {
+   public static void main(String[] args) {
+      ...
+      
+      String file = myManager.readFile(filePath);
+   }
+}
+```
 You can read a file using the <i>readFile()</i> method. The method also uses a
 <i>String filename</i> parameter in order to locate the file to read. It then
 scans the entire file and returns its content as a String.
 
 <br>
 
-      import GSFileManager.FileManager;
+```java
+import GSFileManager.FileManager;
 
-      public class Example {
-         public static void main(String[] args) {
-            ...
+public class Example {
+   public static void main(String[] args) {
+      ...
 
-            String content = "Hello, World! This is my message!"
-            myManager.writeToFile(filename, content);
-         }
-      }
+      String content = "Hello, World! This is my message!"
+      myManager.writeToFile(filename, content);
+   }
+}
+```
+
 You can write to a file using the <i>writeToFile()</i> method. The method uses a
 <i>String filename</i> parameter as well as a <i>String content</i> parameter. It
 will write the contents of the String to the file. I also recommend using a
@@ -84,21 +92,24 @@ easily build the string to add in the file.
 
 <br>
 
-      import GSFileManager.FileManager;
+```java
+import GSFileManager.FileManager;
 
-      public class Example {
-         public static void main(String[] args) {
-            ...
-            
-            myManager.eraseContent(filename);
-         }
-      }
+public class Example {
+   public static void main(String[] args) {
+      ...
+      
+      myManager.eraseContent(filename);
+   }
+}
+```
 To erase the content of a file, you can use the <i>eraseContent()</i> method which
 will take in a <i>String filename</i> parameter to locate the file. It will replace
 the content of the file with an empty String.
 
 <br>
 
+```java
       import GSFileManager.FileManager;
 
       public class Example {
@@ -108,6 +119,7 @@ the content of the file with an empty String.
             myManager.deleteFile(filename);
          }
       }
+```
 The <i>deleteFile</i> method uses a <i>String filename</i> parameter to locate
 the file. It then uses the <i>File delete()</i> method to delete the file.
 
