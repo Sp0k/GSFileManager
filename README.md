@@ -1,3 +1,5 @@
+* This is the first package of my library GSLib, I will publish the whole thing once I finish coding it *
+
 # GSFileManager
 
 This is my file management package for Java. It will contain all the java methods
